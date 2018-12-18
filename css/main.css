@@ -1,0 +1,229 @@
+body
+{
+	background-color: white;
+}
+.logo
+{
+	width: 132px;
+	height: 88px;
+}
+
+.photo
+{
+	width: 100px; 
+	height:100px;
+	transform: translateY(-10px);
+}
+
+.nav-cus
+{
+	padding-bottom: 0px;
+	padding-left: 0px;
+}
+
+.m-std
+{
+	margin-left: 34px;
+}
+
+.m-std-r
+{
+	margin-right: 34px;
+}
+
+
+.display-5
+{
+	font-size: 2em;
+}
+
+.display-6
+{
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.percentage
+{
+	font-weight: bold;
+}
+.skill-level
+{
+	background-color: rgb(127, 255, 212);
+	height: 7px;
+}
+.sub-head
+{
+	font-size: .9rem;
+}
+.circle {
+    border: 2px solid rgba(127, 255, 212,0.7);
+    width: 70px;
+    height: 70px;
+	border-radius: 50%;
+	padding-top:21px; 
+}
+
+.boxed
+{
+	border-style: solid;
+	border-width: 1px;
+	border-color: aquamarine;
+	border-radius: 30px;
+}
+
+.line
+{
+	background-color: gray;
+	width: 100%;
+	height: 1px;
+}
+
+.boder-left
+
+{
+	border-left: 1px solid aquamarine;
+}
+
+.boder-top
+
+{
+	border-top: 1px solid aquamarine;
+}
+
+.skill-box
+{
+	margin: 5px;
+}
+
+.skill-box div:nth-child(1)
+{
+	margin-top: 10px;
+	width: 70%;
+}
+
+.skill-box div:nth-child(2)
+{
+	margin-top: 30px;
+	width: 20%;
+}
+
+.skill-box div:nth-child(3)
+{
+	margin-top: 30px;
+	width: 30%;
+}
+
+thead
+{
+	border-bottom: 1px solid rgba(127, 255, 212,0.7); 
+}
+
+table p
+{
+	margin: 0;
+}
+
+.underline
+{
+	width:fit-content;
+	border-bottom: 1px solid aquamarine;
+}
+
+.circle-sm {
+    border: 2px solid rgba(127, 255, 212,0.7);
+    width: 50px;
+    height: 50px;
+	border-radius: 50%;
+	padding-top: 10px;
+}
+
+.follow
+{
+	font-size: 15px;
+	padding-left: 10px;
+}
+
+.fa-arrow-right
+{
+	font-size:24px; 
+	float: right; 
+	transform: translateY(-35px);
+}
+
+i
+{
+	font-size: 20px;
+}
+
+.fa-share-alt span
+{
+	padding: 0 5px 0 5px;
+}
+
+.project-btw
+{
+	width: 131px; 
+	height:45px; 
+	padding-top: 10px;
+}
+
+.green-box
+{
+	width: 26px;
+    height: 40px;
+    background: rgba(0, 243, 122, 1);
+	transform: translateY(-50px);
+	float: right;
+}
+.mdl-end
+{
+	margin: 0px 0px 4rem 0px;
+}
+
+.transY
+{
+	transform: translateY(-20px);
+}
+
+.purple-box
+{
+	color: white;
+	background-color:rgba(133, 51, 240, 1);
+	width: 100px;
+	height: 30px;
+	border-radius: 20px;
+	transform: translate(-8px,-23px);
+	font-size: 10px;
+	text-align: center;
+	position: absolute;
+}
+
+.transX
+{
+	transform: translateX(100px);
+}
+
+#overlay {
+	position: fixed; /* Sit on top of the page content */
+	display: none; /* Hidden by default */
+	width: 100%; /* Full width (cover the whole page) */
+	height: 100%; /* Full height (cover the whole page) */
+	top: 0; 
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+	z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+	cursor: pointer; /* Add a pointer on hover */
+  }
+
+  #text{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 50px;
+	color: white;
+	transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+  }
