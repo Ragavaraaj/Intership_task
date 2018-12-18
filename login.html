@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU'
+        crossorigin='anonymous'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.7.0/d3.min.js"></script>
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <img src="./img/logo.JPG" alt="" class="logo">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html"><span class="sr-only">Login</span></a>
+              </li>
+            </ul>
+          </div>
+    </nav>
+    <div class="container m-std">
+        <div id="overlay">
+            <div id="text"></div>
+        </div>
+        <div class="row h-100 w-100 m-0">
+            <div class="col-sm-6 p-4">
+                <form id="signupform" class="needs-validation">
+                    <div class="display-5 mb-4">Signup</div>
+                    <div class="form-group" id="divname">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="" required pattern="^.*[A-Za-z]$" onfocus="this.parentElement.classList.add('was-validated')" onfocusout="this.parentElement.classList.remove('was-validated')">
+                    </div>
+                    <div class="form-group" id="divsirname">
+                        <label for="sirname">Sir Name</label>
+                        <input type="text" class="form-control" name="sirname" id="sirname" placeholder="" required pattern="^.*[A-Za-z]$" onfocus="this.parentElement.classList.add('was-validated')" onfocusout="this.parentElement.classList.remove('was-validated')">
+                    </div>
+                    <div class="form-group" id="divdob">
+                        <label for="dob">Date of Birth</label>
+                        <input type="text" class="form-control" name="dob" id="dob" placeholder="" required pattern="^[0-9]{2}\/[0-1][0-9]\/[0-9]{4}$" onfocus="this.parentElement.classList.add('was-validated')" onfocusout="this.parentElement.classList.remove('was-validated')"> 
+                        <small id="helpId" class="form-text text-muted">formate is dd/mm/yy</small>
+                    </div>
+                    <div class="form-group" id="divemail">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" id="eamil" placeholder="" required pattern="^\w+@[a-zA-Z_]+(\.[a-zA-Z]{2,3}){1,3}$" onfocus="this.parentElement.classList.add('was-validated')" onfocusout="this.parentElement.classList.remove('was-validated')">
+                    </div>
+                    <div class="form-group" id="divspass">
+                        <label for="spass">Password</label>
+                        <input type="password" class="form-control" name="spass" id="spass" placeholder="" required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=($#@!%^&*)*)[\w$#@!%^&*]{4,}$" onfocus="this.parentElement.classList.add('was-validated')" onfocusout="this.parentElement.classList.remove('was-validated')">
+                        <small id="passhelp" class="form-text text-muted">the password should contain 4 character one small aplhabet one big one number and any of the special character [$#@!%^&*]</small>
+                    </div>
+                    <div class="form-group mb-4" id="divconf">
+                        <label for="cpass">Conformation Password</label>
+                        <input type="password" class="form-control" name="cpass" id="cpass" placeholder="" required onfocus="this.parentElement.classList.add('was-validated')" onfocusout="this.parentElement.classList.remove('was-validated')">
+                    </div>
+                    <input type="submit" class="btn btn-outline-primary btn-block">
+                </form>
+            </div>
+            <div class="col-sm-6 p-4 my-auto transX" style="border: 1px solid aquamarine">
+                <form id="loginform" class="needs-validation">
+                    <div class="display-5 mb-4">Login</div>
+                    <div class="form-group" id="divusr">
+                        <label for="username">Username</label>
+                        <input type="email" class="form-control" name="username" id="username" aria-describedby="emailHelpId"
+                            placeholder="" required pattern="^\w+@[a-zA-Z_]+(\.[a-zA-Z]{2,3}){1,3}$" onfocus="this.parentElement.classList.add('was-validated')" onfocusout="this.parentElement.classList.remove('was-validated')">
+                    </div>
+                    <div class="form-group mb-4" id="divpass">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" name="password" id="password" placeholder=""
+                            required onfocus="this.parentElement.classList.add('was-validated')" onfocusout="this.parentElement.classList.remove('was-validated')">
+                    </div>
+                    <input type="submit" class="btn btn-outline-primary btn-block " value="Login">
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
